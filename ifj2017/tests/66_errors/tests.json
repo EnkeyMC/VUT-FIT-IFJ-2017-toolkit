@@ -1072,7 +1072,7 @@
     },
     {
       "info": "Keyword instead identifier",
-      "compiler_exit_code": 2,
+      "compiler_exit_code": 3,
       "code": "scope \n dim asc as integer\n end scope"
     },
     {
@@ -1107,7 +1107,7 @@
     },
     {
       "info": "Keyword instead identifier",
-      "compiler_exit_code": 2,
+      "compiler_exit_code": 3,
       "code": "scope \n dim chr as integer\n end scope"
     },
     {
@@ -1132,7 +1132,7 @@
     },
     {
       "info": "Keyword instead identifier",
-      "compiler_exit_code": 2,
+      "compiler_exit_code": 3,
       "code": "scope \n dim length as integer\n end scope"
     },
     {
@@ -1162,7 +1162,7 @@
     },
     {
       "info": "Keyword instead identifier",
-      "compiler_exit_code": 2,
+      "compiler_exit_code": 3,
       "code": "scope \n dim substr as integer\n end scope"
     },
     {
@@ -1352,22 +1352,22 @@
     },
     {
       "info": "Redefine build-in function",
-      "compiler_exit_code": 2,
+      "compiler_exit_code": 3,
       "code": "declare function length() as integer\n function length() as integer \n end function\nscope\nend scope"
     },
     {
       "info": "Redefine build-in function",
-      "compiler_exit_code": 2,
+      "compiler_exit_code": 3,
       "code": "declare function SUBSTR() as integer\n function SUBSTR() as integer \n end function\nscope\nend scope"
     },
     {
       "info": "Redefine build-in function",
-      "compiler_exit_code": 2,
+      "compiler_exit_code": 3,
       "code": "declare function AsC() as integer\n function AsC() as integer \n end function\nscope\nend scope"
     },
     {
       "info": "Redefine build-in function",
-      "compiler_exit_code": 2,
+      "compiler_exit_code": 3,
       "code": "declare function CHr() as integer\n function CHr() as integer \n end function\nscope\nend scope"
     },
     {
@@ -1471,26 +1471,6 @@
       "extensions": [
         "BASE"
       ]
-    },
-    {
-      "info": "Lexical error",
-      "compiler_exit_code": 1,
-      "code": "scope \n print !\"\t\";\n end scope"
-    },
-    {
-      "info": "Lexical error",
-      "compiler_exit_code": 1,
-      "code": "scope \n print !\"\u0011\";\n end scope"
-    },
-    {
-      "info": "Lexical error",
-      "compiler_exit_code": 1,
-      "code": "scope \n print !\"\u0001\";\n end scope"
-    },
-    {
-      "info": "Lexical error",
-      "compiler_exit_code": 1,
-      "code": "scope \n print !\"\u0010\";\n end scope"
     },
     {
       "info": "Return in scope in scope",
