@@ -60,12 +60,14 @@ class TestLogger(object):
         to_log = ''.join(map(str, filter(None, args)))
         if cls.disable_colors:
             for color in (
-                    cls.BLUE, cls.GREEN, cls.WARNING, cls.HEADER, cls.FAIL, cls.BOLD, cls.UNDERLINE
+                    cls.BLUE, cls.GREEN, cls.WARNING, cls.HEADER,
+                    cls.FAIL, cls.BOLD, cls.UNDERLINE, cls.END
             ):
                 to_log = to_log.replace(color, '')
 
         write(to_log)
-        write(cls.END)
+        if not cls.disable_colors:
+            write(cls.END)
         if end:
             write('\n')
 
@@ -135,7 +137,7 @@ class TestLogger(object):
             'RESULTS:',
             cls.END,
             cls.BOLD,
-            ' {:.2f}%'.format((float(success) / (total - skipped)) * 100),
+            ' {:.3f}%'.format((float(success) / (total - skipped)) * 100),
             cls.END,
             ' ({}/{})\n'.format(success, total - skipped),
             cls.END,
